@@ -21,11 +21,12 @@ for PACKAGE in \
     amazon-ecr-credential-helper \
     aws-cli-v2-bin \
     chrome-gnome-shell \
-    cider-git \
+    cider \
     code-marketplace \
     kind-bin \
     macchina-bin \
-    paru-bin
+    paru-bin \
+    slack-electron
 do
     git -C ${HOME}/packages clone https://aur.archlinux.org/${PACKAGE}.git
     cd ${HOME}/packages/${PACKAGE}
