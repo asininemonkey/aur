@@ -7,6 +7,7 @@ RUN pacman --noconfirm --refresh --sync --sysupgrade \
         code \
         electron17 \
         fakeroot \
+        gcc \
         git \
         gnome-shell \
         go \
