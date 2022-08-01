@@ -19,6 +19,7 @@ echo -n "${GPG_PRIVATE_KEY_B64}" | base64 --decode | gpg --batch --import
 
 for PACKAGE in \
     amazon-ecr-credential-helper \
+    docker-credential-secretservice \
     aws-cli-v2-bin \
     chrome-gnome-shell \
     cider \
