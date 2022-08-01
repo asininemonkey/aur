@@ -15,6 +15,7 @@ RUN pacman --noconfirm --refresh --sync --sysupgrade \
         jq \
         make \
         npm \
+        pkg-config \
         python-gobject \
         python-requests \
         sudo \
