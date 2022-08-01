@@ -5,6 +5,7 @@ RUN pacman --noconfirm --refresh --sync --sysupgrade \
         binutils \
         cmake \
         code \
+        electron17 \
         fakeroot \
         git \
         gnome-shell \

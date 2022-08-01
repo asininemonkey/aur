@@ -28,3 +28,5 @@ on:
     paths:
       - .github/workflows/docker.yaml
       - Dockerfile
+  schedule:
+    - cron: '0 0 * * 0'
