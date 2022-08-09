@@ -22,5 +22,6 @@ on:
     paths:
       - .github/workflows/aur.yaml
       - aur.sh
+      - packages.txt
   schedule:
     - cron: '0 0 * * *'

@@ -17,17 +17,7 @@ echo -n "${GPG_PASSPHRASE}" | /usr/lib/gnupg/gpg-preset-passphrase --preset 'A0F
 
 echo -n "${GPG_PRIVATE_KEY_B64}" | base64 --decode | gpg --batch --import
 
-for PACKAGE in \
-    amazon-ecr-credential-helper \
-    docker-credential-secretservice \
-    aws-cli-v2-bin \
-    chrome-gnome-shell \
-    cider \
-    code-marketplace \
-    kind-bin \
-    macchina-bin \
-    paru-bin \
-    slack-electron
+for PACKAGE in $(cat packages.txt)
 do
     git -C ${HOME}/packages clone https://aur.archlinux.org/${PACKAGE}.git
     cd ${HOME}/packages/${PACKAGE}
