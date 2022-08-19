@@ -19,6 +19,8 @@ echo -n "${GPG_PASSPHRASE}" | /usr/lib/gnupg/gpg-preset-passphrase --preset 'A0F
 
 echo -n "${GPG_PRIVATE_KEY_B64}" | base64 --decode | gpg --batch --import
 
+curl --location --show-error --silent https://downloads.1password.com/linux/keys/1password.asc | gpg --import
+
 for PACKAGE in $(cat "${SCRIPT_PATH}/packages.txt")
 do
     git -C ${HOME}/packages clone https://aur.archlinux.org/${PACKAGE}.git
