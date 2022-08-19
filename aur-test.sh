@@ -11,6 +11,8 @@ mkdir --mode 0700 --parents \
     ${HOME}/packages \
     ${HOME}/repo
 
+curl --location --show-error --silent https://downloads.1password.com/linux/keys/1password.asc | gpg --batch --import
+
 for PACKAGE in $(cat "${SCRIPT_PATH}/packages.txt")
 do
     git -C ${HOME}/packages clone https://aur.archlinux.org/${PACKAGE}.git
