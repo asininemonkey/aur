@@ -1,7 +1,7 @@
+1password
 amazon-ecr-credential-helper
 aws-cli-v2-bin
 chrome-gnome-shell
-cider
 code-marketplace
 docker-credential-secretservice
 kind-bin
