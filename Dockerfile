@@ -7,7 +7,7 @@ RUN pacman --noconfirm --refresh --sync --sysupgrade \
         clang \
         cmake \
         code \
-        electron17 \
+        electron \
         fakeroot \
         flex \
         gcc \
