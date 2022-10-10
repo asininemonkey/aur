@@ -1,9 +1,9 @@
 1password
 amazon-ecr-credential-helper
 aws-cli-v2-bin
-chrome-gnome-shell
 code-marketplace
 docker-credential-secretservice
+gnome-browser-connector
 kind-bin
 macchina-bin
 mozillavpn
