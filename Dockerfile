@@ -4,6 +4,7 @@ RUN useradd --create-home build
 
 # Global Dependencies
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
+        aws-cli \
         fakeroot \
         git \
     && \
