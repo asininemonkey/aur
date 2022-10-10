@@ -23,5 +23,5 @@ on:
       - aur.sh
       - packages.txt
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 4 * * *'
   workflow_dispatch:
