@@ -8,4 +8,3 @@ kind-bin
 macchina-bin
 mozillavpn
 paru-bin
-slack-electron
