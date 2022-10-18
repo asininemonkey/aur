@@ -7,4 +7,5 @@ gnome-browser-connector
 kind-bin
 macchina-bin
 mozillavpn
+otf-san-francisco
 paru-bin
