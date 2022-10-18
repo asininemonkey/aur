@@ -5,6 +5,7 @@ RUN useradd --create-home build
 # Global Dependencies
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
         aws-cli \
+        binutils \
         fakeroot \
         git \
     && \
@@ -12,7 +13,6 @@ RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
 
 # amazon-ecr-credential-helper
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
         go \
         make \
     && \
@@ -20,21 +20,18 @@ RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
 
 # aws-cli-v2-bin
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
         unzip \
     && \
     pacman --clean --clean --noconfirm --sync
 
 # code-marketplace
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
         code \
     && \
     pacman --clean --clean --noconfirm --sync
 
 # docker-credential-secretservice
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
         gcc \
         go \
         make \
@@ -44,7 +41,6 @@ RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
 
 # gnome-browser-connector - buildtime
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
         meson \
     && \
     pacman --clean --clean --noconfirm --sync
@@ -56,21 +52,8 @@ RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
     && \
     pacman --clean --clean --noconfirm --sync
 
-# kind-bin
-RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
-    && \
-    pacman --clean --clean --noconfirm --sync
-
-# macchina-bin
-RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
-    && \
-    pacman --clean --clean --noconfirm --sync
-
 # mozillavpn - buildtime
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
         cargo \
         clang \
         cmake \
@@ -101,15 +84,14 @@ RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
     && \
     pacman --clean --clean --noconfirm --sync
 
-# paru-bin
+# otf-san-francisco
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
+        fontconfig \
     && \
     pacman --clean --clean --noconfirm --sync
 
 # slack-electron
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        binutils \
         electron \
     && \
     pacman --clean --clean --noconfirm --sync
