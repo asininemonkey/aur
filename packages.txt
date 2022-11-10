@@ -6,6 +6,6 @@ docker-credential-secretservice
 gnome-browser-connector
 kind-bin
 macchina-bin
-mozillavpn
+mullvad-vpn
 otf-san-francisco
 paru-bin
