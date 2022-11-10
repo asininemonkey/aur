@@ -52,47 +52,29 @@ RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
     && \
     pacman --clean --clean --noconfirm --sync
 
-# mozillavpn - buildtime
+# mullvad-vpn - buildtime
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        cargo \
-        clang \
-        cmake \
-        flex \
-        go \
-        python-lxml \
-        python-yaml \
-        qt6-tools \
+        libappindicator-gtk3 \
+        libnotify \
+        nss \
+        patch \
+        pkg-config \
     && \
     pacman --clean --clean --noconfirm --sync
 
-# mozillavpn - runtime
+# mullvad-vpn - runtime
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        linux \
-        make \
-        openresolv \
-        patch \
-        pkg-config \
-        polkit \
-        qt6-5compat \
-        qt6-charts \
-        qt6-imageformats \
-        qt6-networkauth \
-        qt6-shadertools \
-        qt6-svg \
-        qt6-websockets \
-        wireguard-tools \
+        cargo \
+        go \
+        libxcrypt-compat \
+        nodejs \
+        npm \
     && \
     pacman --clean --clean --noconfirm --sync
 
 # otf-san-francisco
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
         fontconfig \
-    && \
-    pacman --clean --clean --noconfirm --sync
-
-# slack-electron
-RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        electron \
     && \
     pacman --clean --clean --noconfirm --sync
 
