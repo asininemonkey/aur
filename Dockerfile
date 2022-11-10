@@ -18,9 +18,23 @@ RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
     && \
     pacman --clean --clean --noconfirm --sync
 
-# aws-cli-v2-bin
+# aws-cli-v2 - buildtime
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
-        unzip \
+        python-build \
+        python-flit \
+        python-installer \
+        python-wheel \
+    && \
+    pacman --clean --clean --noconfirm --sync
+
+# aws-cli-v2 - runtime
+RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
+        python-awscrt \
+        python-cryptography \
+        python-distro \
+        python-prompt_toolkit \
+        python-ruamel-yaml \
+        python-wcwidth \
     && \
     pacman --clean --clean --noconfirm --sync
 
@@ -52,6 +66,19 @@ RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
     && \
     pacman --clean --clean --noconfirm --sync
 
+# kind - buildtime
+RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
+        gcc \
+        go \
+    && \
+    pacman --clean --clean --noconfirm --sync
+
+# kind - runtime
+RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
+        kubectl \
+    && \
+    pacman --clean --clean --noconfirm --sync
+
 # mullvad-vpn - buildtime
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
         libappindicator-gtk3 \
@@ -75,6 +102,13 @@ RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
 # otf-san-francisco
 RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
         fontconfig \
+    && \
+    pacman --clean --clean --noconfirm --sync
+
+# paru
+RUN pacman --needed --noconfirm --refresh --sync --sysupgrade \
+        cargo \
+        pkg-config \
     && \
     pacman --clean --clean --noconfirm --sync
 
