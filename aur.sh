@@ -16,10 +16,10 @@ echo 'allow-preset-passphrase' > ${HOME}/.gnupg/gpg-agent.conf
 gpg-agent --daemon
 
 echo -n "${GPG_PASSPHRASE}" | /usr/lib/gnupg/gpg-preset-passphrase --preset 'A0F6F29445A54D625A7E845B6AACFF99D222A382'
-
 echo -n "${GPG_PRIVATE_KEY_B64}" | base64 --decode | gpg --batch --import
 
-curl --location --show-error --silent https://downloads.1password.com/linux/keys/1password.asc | gpg --batch --import
+gpg --batch --receive-keys '78CEAA8CB72E4467' # mullvad-vpn
+gpg --batch --receive-keys 'AC2D62742012EA22' # 1password
 
 for PACKAGE in $(cat "${SCRIPT_PATH}/packages.txt")
 do

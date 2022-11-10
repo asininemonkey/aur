@@ -11,7 +11,8 @@ mkdir --mode 0700 --parents \
     ${HOME}/packages \
     ${HOME}/repo
 
-curl --location --show-error --silent https://downloads.1password.com/linux/keys/1password.asc | gpg --batch --import
+gpg --batch --receive-keys '78CEAA8CB72E4467' # mullvad-vpn
+gpg --batch --receive-keys 'AC2D62742012EA22' # 1password
 
 for PACKAGE in $(cat "${SCRIPT_PATH}/packages.txt")
 do
