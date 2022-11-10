@@ -1,11 +1,11 @@
 1password
 amazon-ecr-credential-helper
-aws-cli-v2-bin
+aws-cli-v2
 code-marketplace
 docker-credential-secretservice
 gnome-browser-connector
-kind-bin
+kind
 macchina-bin
 mullvad-vpn
 otf-san-francisco
-paru-bin
+paru
